@@ -1,8 +1,9 @@
-# s1
+# s1 
 
 > A Vue.js project
 
 ## 預計更新 ver1.05
+
 > - 將早期的 CSS 更換成 SCSS
 > - 優化早期的 JavaScript
 
