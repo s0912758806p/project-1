@@ -16,9 +16,16 @@
 > - 將早期的 CSS 更換成 SCSS
 > - 優化早期的 JavaScript
 
-### 心情日誌
+### 心情日誌 19/11/6 
 
-~忙於學習也是一種莫名的樂趣, 真的很妙.~
+最近讀書讀到累了, 看一下 youtube 居然發現 DiabloIV 的預告,
+不知要何年何月才會上市, 啊, 我的青春歲月果然還是要有消遣才會快樂.
+
+~不過, 沉醉在知識的大海中學習也是一種莫名的樂趣, 那種感覺真的很妙.~
+
+讓我不禁想起那幾句台詞：
+' There is no light here, you came to the darkness for knowledge '
+' And all the knowledge you seek is here '
 
 --------------------------------------------------------------
 ## Build Setup
