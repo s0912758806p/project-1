@@ -1,0 +1,146 @@
+footer {
+  width: 100%;
+  height: auto;
+  padding-top: 44px;
+  padding-bottom: 98px;
+  background-color: var(--overlay-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.ft_box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ft_logo {
+  width: 120px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.ft_nav {
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > ul > li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    > a {
+      font-size: 15px;
+      color: #fff;
+    }
+  }
+}
+
+.ft_icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+
+  > ul > li {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.ft_term {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #e1e1e1;
+
+  > ul > li {
+    text-align: center;
+    margin: 5px;
+  }
+}
+
+.ft_copyright {
+  color: #e1e1e1;
+  font-size: 12px;
+  margin: 5px;
+}
+
+.ft_caveat {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 10%;
+  background: #0a1024 url('../assets/image/mobliecravet.png') 50% 50% no-repeat;
+  background-size: 100% auto;
+  min-width: 60px;
+  z-index: 9;
+}
+
+@media screen and (min-width: 768px) {
+  /* FT */
+
+  .ft_box {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row;
+  }
+
+  .ft_logo {
+    width: 50%;
+    max-width: 200px;
+
+    > img {
+      width: 100%;
+      vertical-align: middle;
+    }
+  }
+
+  .ft_nav {
+    width: 40%;
+
+    > ul > li {
+      text-align: center;
+      display: inline-block;
+      margin: 10px;
+      padding-left: 20px;
+    }
+  }
+
+  .ft_icon,
+  .ft_term {
+    width: 25%;
+  }
+
+  .ft_copyright {
+    text-align: center;
+    width: 25%;
+  }
+
+  /* CAVEAT */
+
+  .ft_caveat {
+    background: #000823 url('../assets/image/caveat.png') 50% 50% no-repeat;
+    background-size: 100% auto;
+  }
+}
