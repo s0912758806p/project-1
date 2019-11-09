@@ -1,0 +1,273 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 60px;
+  background-color: var(--overlay-color);
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--overlay-color);
+}
+
+.hd_web_menu > ul > li {
+  display: none;
+}
+
+.hd_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hd_logo {
+  width: 120px;
+  margin-left: 10px;
+  position: relative;
+  pointer-events: visible;
+
+  img {
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  > h1 {
+    position: absolute;
+    display: none;
+  }
+}
+
+.hd_wrap {
+  .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    pointer-events: visible;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > div {
+      position: relative;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.4s ease;
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+        top: 10px;
+      }
+    }
+  }
+
+  .toggler:checked {
+    + .hamburger > div {
+      transform: rotate(-135deg);
+      background-color: var(--primary-color);
+
+      &::before,
+      &::after {
+        top: 0;
+        transform: rotate(-90deg);
+      }
+    }
+
+    &:hover + .hamburger > div {
+      transform: rotate(-225deg);
+    }
+
+    ~ .menu {
+      visibility: visible;
+
+      > div {
+        transform: scale(1);
+        transition-duration: var(--menu-speed);
+
+        > div {
+          opacity: 1;
+          transition: opacity 0.4s ease;
+        }
+      }
+    }
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > div {
+      background-color: var(--overlay-color);
+      border-radius: 50%;
+      width: 300vw;
+      height: 300vw;
+      display: flex;
+      flex: none;
+      justify-content: center;
+      align-items: center;
+      transform: scale(0);
+      transition: all 0.4s ease;
+
+      > div {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+
+        > ul > li {
+          color: #e1e1e1;
+          font-size: 35px;
+          padding: 10px;
+          margin-bottom: 5px;
+          pointer-events: visible;
+
+          > a {
+            color: inherit;
+            transition: color 0.4s ease;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Hamburger line */
+
+/* Top and bottom lines */
+
+/* Moves lines down */
+
+/* Toggler animate */
+
+/* Turn lines into X */
+
+/* Rotate on hover when checked */
+
+/* Show menu */
+
+@media screen and (min-width: 768px) {
+  /* HD */
+
+  header {
+    height: 100px;
+  }
+
+  nav {
+    z-index: 2;
+  }
+
+  #hd_web_navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .hd_logo {
+    width: 200px;
+    margin-left: 20px;
+  }
+
+  .hd_wrap {
+    display: none;
+  }
+
+  .hd_web_menu > ul > li {
+    font-size: 20px;
+    margin: 8px;
+    padding: 5px;
+    display: inline-block;
+    pointer-events: visible;
+
+    > a {
+      color: #e1e1e1;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 0px;
+        height: 3px;
+        background: #00bcd4;
+        position: absolute;
+        top: 120%;
+        left: 0;
+        transition: 0.5s;
+      }
+
+      &::after {
+        content: '';
+        width: 0px;
+        height: 3px;
+        background: #f0f;
+        position: absolute;
+        top: 120%;
+        right: 0;
+        transition: 0.5s;
+      }
+    }
+
+    &:hover > a {
+      &::before {
+        width: 50%;
+        transform: translateX(100%);
+      }
+
+      &::after {
+        width: 50%;
+        transform: translateX(-100%);
+      }
+    }
+  }
+}

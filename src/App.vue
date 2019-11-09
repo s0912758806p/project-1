@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="">
 * {
   margin: 0;
   padding: 0;

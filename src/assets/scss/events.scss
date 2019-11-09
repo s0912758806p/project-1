@@ -1,0 +1,455 @@
+/* 　↓↓↓↓↓　　Mobile-Style　↓↓↓↓↓　*/
+
+/* ----- Mobile EVENT START LINE ----- */
+
+.event_title {
+  width: 100%;
+}
+
+.event_title_img {
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.event_h2 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+
+  h2 {
+    font-size: 20px;
+    color: var(--primary-color);
+  }
+}
+
+.event_box {
+  width: 100%;
+}
+
+.event_box_item {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.event_box_wd {
+  display: none;
+}
+
+.event_box_bg {
+  width: 100%;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+}
+
+.event_box_bg_h3 {
+  width: 96%;
+  height: 96%;
+  border: 1px solid #ddd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    font-size: 16px;
+    color: #e1e1e1;
+  }
+}
+
+.event_box_img {
+  width: 100%;
+  padding-bottom: 20px;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+}
+
+.event_box_p {
+  padding: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.event_box_img p {
+  color: #e1e1e1;
+  font-size: 16px;
+}
+
+.event_box_txt {
+  width: 100%;
+}
+
+.event_box_txt_h3 {
+  width: 100%;
+
+  h3 {
+    font-size: 18px;
+    color: #e1e1e1;
+    background-color: #012875;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.event_box_txt_p {
+  width: 100%;
+
+  p {
+    /* font-size: 16px; */
+    color: #ddd;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.event_box_item_bg,
+.event_box_midsammer {
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.event_box_mid {
+  width: 100%;
+  padding: 15px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  h3 {
+    color: #e1e1e1;
+    background-color: #012875;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  p {
+    color: #ddd;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.event_box_mid_vd {
+  width: 100%;
+  height: 100%;
+
+  video {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.event_wall_a {
+  width: 100%;
+  max-width: 1200px;
+
+  /* margin: auto; */
+  overflow-x: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.event_box_txt_vd,
+.event_box_mid_wd_vd,
+.event_wall_box {
+  display: none;
+}
+
+#web_close {
+  z-index: 0;
+}
+
+/* ----- Mobile EVENT END LINE ----- */
+
+/* ----- Web EVENT START LINE ----- */
+@media screen and (min-width: 768px) {
+  .event_title_img {
+    width: 100%;
+    max-height: 800px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      bottom: 90px;
+    }
+  }
+
+  .event_h2 {
+    padding-top: 100px;
+    padding-bottom: 25px;
+    margin-top: 30px;
+
+    h2 {
+      font-size: 28px;
+    }
+  }
+
+  .event_box {
+    width: 100%;
+
+    p {
+      font-size: 19px;
+    }
+  }
+
+  .event_box_item {
+    width: 100%;
+    display: flex;
+  }
+
+  .event_box_wd {
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .event_box_wd_txt {
+    width: 50%;
+    padding: 10px;
+
+    h3 {
+      font-size: 22px;
+      background-color: #012875;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    p {
+      font-size: 19px;
+      color: #ddd;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+
+  .event_box_bg {
+    width: 50%;
+    height: 450px;
+    background: url('../assets/image/hightonight.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+
+    img {
+      display: none;
+    }
+  }
+
+  .event_box_bg_h3 h3 {
+    font-family: 'blacksword';
+    font-size: 28px;
+    text-shadow: 1px 1px 1px #070710;
+  }
+
+  .event_box_img {
+    width: 25%;
+  }
+
+  .event_box_p {
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+      transition: 0.5s;
+    }
+  }
+
+  .event_box_txt {
+    width: 50%;
+    padding: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    h3 {
+      font-size: 22px;
+    }
+
+    p {
+      color: #ddd;
+      font-size: 19px;
+    }
+  }
+
+  .event_box_item_bg {
+    width: 50%;
+  }
+
+  .event_box_txt_vd {
+    width: 100%;
+    display: flex;
+    height: 300px;
+
+    video {
+      width: 100%;
+      height: 100%;
+      margin-top: 10px;
+    }
+  }
+
+  .event_box_midsammer {
+    background: url('../assets/image/Absolut-Midsommar-Weekender-0180.jpg')
+      no-repeat 50% 50%;
+    background-size: cover;
+
+    /* background-attachment: fixed; */
+    opacity: 0.9;
+    max-width: 1200px;
+    margin: auto;
+    height: 500px;
+    max-height: 500px;
+    overflow: hidden;
+
+    img {
+      display: none;
+    }
+  }
+
+  .event_box_mid_writing {
+    width: 15%;
+    position: relative;
+
+    h2 {
+      font-size: 35px;
+      writing-mode: vertical-lr;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 45%;
+        left: 35%;
+        width: 2px;
+        height: 35px;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .event_box_mid {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+
+    img {
+      width: 50%;
+    }
+
+    &:nth-child(3) img {
+      order: 1;
+    }
+  }
+
+  .event_box_mid_wd {
+    padding: 15px;
+    font-size: 19px;
+
+    h3 {
+      font-size: 22px;
+    }
+  }
+
+  .event_box_mid_wd_vd {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+
+    video {
+      width: 100%;
+      height: 100%;
+      margin-top: 10px;
+    }
+  }
+
+  .event_box_mid_vd,
+  #web_close {
+    display: none;
+  }
+
+  .event_wall {
+    width: 100%;
+    display: flex;
+  }
+
+  .event_wall_box {
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .event_wall_art {
+    width: 25%;
+    margin: 5px;
+
+    img {
+      width: 100%;
+      max-width: 350px;
+      height: 100%;
+      max-height: 700px;
+      margin-bottom: 5px;
+      background-color: #070710;
+      opacity: 1;
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+}
+
+/* ----- Web EVENT END LINE ----- */
