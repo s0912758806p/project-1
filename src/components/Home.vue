@@ -49,28 +49,28 @@
         </div>
 
         <div class="index_stn_bottle">
-          <div class="index_stn_bottle_bg" data-aos="fade-up" data-aos-duration="2500">
-            <div id="drop_bottle" class="index_stn_bottle_product_drop">
-              <a href="product.html">
-                <img src="../assets/image/absolutdrop.png" alt />
+          <div class="index_stn_bottle_bg">
+            <div class="index_stn_bottle_product_drop" v-show="itemShow === 1">
+              <a href="javascript:;">
+                <img :src="imgDropBottle" alt />
               </a>
             </div>
-            <div id="rainbow_bottle" class="index_stn_bottle_product_exly">
-              <a href="product.html">
-                <img src="../assets/image/absolutrainbow.png" alt />
+            <div class="index_stn_bottle_product_exly" v-show="itemShow === 2">
+              <a href="javascript:;">
+                <img :src="imgRainBottle" alt />
               </a>
             </div>
-            <div id="exly_bottle" class="index_stn_bottle_product_exly">
-              <a href="product.html">
-                <img src="../assets/image/absolutexly-11.png" alt />
+            <div class="index_stn_bottle_product_exly" v-show="itemShow === 3">
+              <a href="javascript:;">
+                <img :src="imgExlyBottle" alt />
               </a>
             </div>
-            <div id="vodka_bottle" class="index_stn_bottle_product_exly">
-              <a href="product.html">
-                <img src="../assets/image/absolutvodka.png" alt />
+            <div class="index_stn_bottle_product_exly" v-show="itemShow === 4">
+              <a href="javascript:;">
+                <img :src="imgVokaBottle" alt />
               </a>
             </div>
-            <div id="drop_txt" class="index_stn_bottle_txt">
+            <div class="index_stn_bottle_txt" v-show="itemShow === 1">
               <div class="index_stn_bottle_h2">
                 <h2>A Drop of Love</h2>
               </div>
@@ -80,7 +80,7 @@
                 <p>Love is the most powerful force in the world. And today the world needs it more than ever. That is why our new limited edition bottle is all about turning hate into love. We call it Absolut Drop, and it will stand as a symbol for love and peace – and good spirits.</p>
               </div>
             </div>
-            <div id="rainbow_txt" class="index_stn_bottle_txt">
+            <div class="index_stn_bottle_txt" v-show="itemShow === 2">
               <div class="index_stn_bottle_h2">
                 <h2>Dream to only</h2>
               </div>
@@ -90,7 +90,7 @@
                 <p>Love is the most powerful force in the world. And today the world needs it more than ever. That is why our new limited edition bottle is all about turning hate into love. We call it Absolut Drop, and it will stand as a symbol for love and peace – and good spirits.</p>
               </div>
             </div>
-            <div id="exly_txt" class="index_stn_bottle_txt">
+            <div class="index_stn_bottle_txt" v-show="itemShow === 3">
               <div class="index_stn_bottle_h2">
                 <h2>The extraordinary of the Marquis</h2>
               </div>
@@ -104,7 +104,7 @@
                 <p>Love is the most powerful force in the world. And today the world needs it more than ever. That is why our new limited edition bottle is all about turning hate into love. We call it Absolut Drop, and it will stand as a symbol for love and peace – and good spirits.</p>
               </div>
             </div>
-            <div id="vodka_txt" class="index_stn_bottle_txt">
+            <div class="index_stn_bottle_txt" v-show="itemShow === 4">
               <div class="index_stn_bottle_h2">
                 <h2>Absolutely the classics.</h2>
               </div>
@@ -114,11 +114,11 @@
                 <p>Love is the most powerful force in the world. And today the world needs it more than ever. That is why our new limited edition bottle is all about turning hate into love. We call it Absolut Drop, and it will stand as a symbol for love and peace – and good spirits.</p>
               </div>
             </div>
-            <div id="index_bottle_btn" @click="clickItem">
-              <div id="index_bottle_btn_box_drop"></div>
-              <div id="index_bottle_btn_box_rainbow"></div>
-              <div id="index_bottle_btn_box_exly"></div>
-              <div id="index_bottle_btn_box_vodka"></div>
+            <div id="index_bottle_btn">
+              <div id="index_bottle_btn_box_drop" @click="clickItem(1)"></div>
+              <div id="index_bottle_btn_box_rainbow" @click="clickItem(2)"></div>
+              <div id="index_bottle_btn_box_exly" @click="clickItem(3)"></div>
+              <div id="index_bottle_btn_box_vodka" @click="clickItem(4)"></div>
             </div>
           </div>
         </div>
@@ -242,79 +242,19 @@
 
 <script>
 export default {
-  props: {
-    aos: Function
-  },
   data() {
-    return {};
+    return {
+      imgDropBottle: require("../assets/image/absolutdrop.png"),
+      imgRainBottle: require("../assets/image/absolutrainbow.png"),
+      imgExlyBottle: require("../assets/image/absolutexly-11.png"),
+      imgVokaBottle: require("../assets/image/absolutvodka.png"),
+      itemShow: 1
+    };
   },
   methods: {
-    clickItem() {
-      // product bottle change
-      var btn_drop = document.getElementById("index_bottle_btn_box_drop");
-      var btn_rainbow = document.getElementById("index_bottle_btn_box_rainbow");
-      var btn_exly = document.getElementById("index_bottle_btn_box_exly");
-      var btn_vodka = document.getElementById("index_bottle_btn_box_vodka");
-
-      // Drop bottle
-
-      btn_drop.onclick = function() {
-        document.getElementById("drop_bottle").style.opacity = "1";
-        document.getElementById("exly_bottle").style.opacity = "0";
-        document.getElementById("rainbow_bottle").style.opacity = "0";
-        document.getElementById("vodka_bottle").style.opacity = "0";
-
-        // txt
-        document.getElementById("drop_txt").style.display = "flex";
-        document.getElementById("rainbow_txt").style.display = "none";
-        document.getElementById("exly_txt").style.display = "none";
-        document.getElementById("vodka_txt").style.display = "none";
-      };
-
-      // Rainbow bottle
-
-      btn_rainbow.onclick = function() {
-        document.getElementById("drop_bottle").style.opacity = "0";
-        document.getElementById("rainbow_bottle").style.opacity = "1";
-        document.getElementById("exly_bottle").style.opacity = "0";
-        document.getElementById("vodka_bottle").style.opacity = "0";
-
-        // txt
-        document.getElementById("drop_txt").style.display = "none";
-        document.getElementById("rainbow_txt").style.display = "flex";
-        document.getElementById("exly_txt").style.display = "none";
-        document.getElementById("vodka_txt").style.display = "none";
-      };
-
-      // Exly bottle
-
-      btn_exly.onclick = function() {
-        document.getElementById("drop_bottle").style.opacity = "0";
-        document.getElementById("rainbow_bottle").style.opacity = "0";
-        document.getElementById("exly_bottle").style.opacity = "1";
-        document.getElementById("vodka_bottle").style.opacity = "0";
-
-        // txt
-        document.getElementById("drop_txt").style.display = "none";
-        document.getElementById("rainbow_txt").style.display = "none";
-        document.getElementById("exly_txt").style.display = "flex";
-        document.getElementById("vodka_txt").style.display = "none";
-      };
-
-      // Vodka bottle
-
-      btn_vodka.onclick = function() {
-        document.getElementById("drop_bottle").style.opacity = "0";
-        document.getElementById("rainbow_bottle").style.opacity = "0";
-        document.getElementById("exly_bottle").style.opacity = "0";
-        document.getElementById("vodka_bottle").style.opacity = "1";
-
-        // txt
-        document.getElementById("drop_txt").style.display = "none";
-        document.getElementById("rainbow_txt").style.display = "none";
-        document.getElementById("exly_txt").style.display = "none";
-        document.getElementById("vodka_txt").style.display = "flex";
-      };
+    // product bottle change
+    clickItem(index) {
+      this.itemShow = index;
     },
     bannerCheck() {
       // index banner loop
