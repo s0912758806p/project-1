@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import Router from 'vue-router';
+
 import Home from '../components/Home';
 import Product from '../components/Product.vue';
 import Oursecret from '../components/Oursecret.vue';
