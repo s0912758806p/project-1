@@ -14,23 +14,8 @@
         <!-- 輪播banner -->
         <a href="#" class="swipeBanner">
           <mt-swipe :show-indicators="false">
-            <mt-swipe-item>
-              <img :src="imgBanner01" alt />
-            </mt-swipe-item>
-            <mt-swipe-item>
-              <img :src="imgBanner02" alt />
-            </mt-swipe-item>
-            <mt-swipe-item>
-              <img :src="imgBanner03" alt />
-            </mt-swipe-item>
-            <mt-swipe-item>
-              <img :src="imgBanner04" alt />
-            </mt-swipe-item>
-            <mt-swipe-item>
-              <img :src="imgBanner05" alt />
-            </mt-swipe-item>
-            <mt-swipe-item>
-              <img :src="imgBanner06" alt />
+            <mt-swipe-item v-for="(item, index) in imgBannerList" :key="index">
+              <img :src="require(`@/assets/image/${item.img}.jpg`)" alt />
             </mt-swipe-item>
           </mt-swipe>
         </a>
@@ -263,12 +248,14 @@ export default {
       imgExlyBottle: require("../assets/image/absolutexly-11.png"),
       imgVokaBottle: require("../assets/image/absolutvodka.png"),
       itemShow: 1,
-      imgBanner01: require("../assets/image/productbg.png"),
-      imgBanner02: require("../assets/image/product1.jpg"),
-      imgBanner03: require("../assets/image/productbg3.jpg"),
-      imgBanner04: require("../assets/image/product4.png"),
-      imgBanner05: require("../assets/image/productbg5.jpg"),
-      imgBanner06: require("../assets/image/productbg6.jpg")
+      imgBannerList: [
+        { img: "productbg1" },
+        { img: "productbg2" },
+        { img: "productbg3" },
+        { img: "productbg4" },
+        { img: "productbg5" },
+        { img: "productbg6" }
+      ]
     };
   },
   components: {
