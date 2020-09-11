@@ -39,6 +39,14 @@
 ' There is no light here, you came to the darkness for knowledge '  
 ' And all the knowledge you seek is here '  
 
+### 2020/9/11
+
+入行快一年, 每天工作超過13小時
+
+肝快炸了, 有空在翻新這個玩意
+
+最近想搞個聊天室玩玩
+
 --------------------------------------------------------------
 ## Build Setup
 
