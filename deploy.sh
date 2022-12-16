@@ -18,7 +18,7 @@ git commit -m 'deploy'
 
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:s0912758806p/My-website.git master:gh-pages
+git push -f https://github.com/s0912758806p/project-1.git master:gh-pages
 
 
 cd -  
