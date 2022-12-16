@@ -12,7 +12,7 @@ import About from '../components/About.vue';
 Vue.use(Router, Vuex);
 
 export default new Router({
-  // mode: 'history'
+  mode: 'hash',
   routes: [
     {
       path: '/home',
