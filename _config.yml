@@ -1,1 +1,5 @@
 theme: jekyll-theme-cayman
+deploy:
+type: github
+repository: 'https://github.com/s0912758806p/My-website'
+root: '/My-website/'
